@@ -1,21 +1,24 @@
 import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
-import ExampleTable from './components/ExampleTable/ExampleTable.js';
-import AnimalTable from './components/AnimalTable/AnimalTable.js';
+import ExampleTable from './components/Table/ExampleTable.js';
+import AnimalTable from './components/Table/AnimalTable.js';
+import ExampleChart from './components/Chart/ExampleChart.js';
+import AnimalChart from './components/Chart/AnimalChart.js';
 
 function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/table">Table</Link>
-        <Link to="/charts">Charts</Link>
+        <Link to="/table">My Table</Link>
+        <Link to="/chart">My Chart</Link>
+        <Link to="/table/example">Example Table</Link>
+        <Link to="/chart/example">Example Chart</Link>
       </nav>
       <Switch>
-        <Route path="/example/table" component={ExampleTable} />
+        <Route exact path="/table/example" component={ExampleTable} />
         <Route path="/table" component={AnimalTable} />
-        <Route path="/charts">
-          <h1>Chart Library</h1>
-        </Route>
+        <Route exact path="/chart/example" component={ExampleChart} />
+        <Route path="/chart" component={AnimalChart} />
       </Switch>
     </div>
   );

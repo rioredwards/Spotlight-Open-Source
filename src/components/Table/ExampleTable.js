@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Table.css';
+import './Table.css';
 
 import { Table, Button } from 'rsuite';
 import { mockUsers } from '../../mock';

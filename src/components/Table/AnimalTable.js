@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Table.css';
+import './Table.css';
 import { Table } from 'rsuite';
 import 'rsuite-table/dist/css/rsuite-table.css';
 import { animalData } from '../../animalData';
