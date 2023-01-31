@@ -4,17 +4,20 @@ import ExampleTable from './components/Table/ExampleTable.js';
 import AnimalTable from './components/Table/AnimalTable.js';
 import ExampleChart from './components/Chart/ExampleChart.js';
 import AnimalChart from './components/Chart/AnimalChart.js';
+import MaterialUI from './components/MaterialUI/MaterialUI.js';
 
 function App() {
   return (
     <div className="App">
       <nav>
+        <Link to="/MaterialUI">MaterialUI</Link>
         <Link to="/table">My Table</Link>
         <Link to="/chart">My Chart</Link>
         <Link to="/table/example">Example Table</Link>
         <Link to="/chart/example">Example Chart</Link>
       </nav>
       <Switch>
+        <Route path="/MaterialUI" component={MaterialUI} />
         <Route exact path="/table/example" component={ExampleTable} />
         <Route path="/table" component={AnimalTable} />
         <Route exact path="/chart/example" component={ExampleChart} />

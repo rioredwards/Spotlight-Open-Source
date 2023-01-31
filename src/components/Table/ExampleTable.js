@@ -13,6 +13,7 @@ export default function ExampleTable() {
       height={400}
       data={data}
       onRowClick={(rowData) => {
+        // eslint-disable-next-line no-console
         console.log(rowData);
       }}
     >

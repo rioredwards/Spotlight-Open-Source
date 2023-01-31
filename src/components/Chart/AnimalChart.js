@@ -9,7 +9,6 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import faker from 'faker';
 import { animalData } from '../../animalData';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -41,8 +40,6 @@ export const data = {
     },
   ],
 };
-
-console.log('data', data);
 
 export default function AnimalChart() {
   return <Bar options={options} data={data} />;
